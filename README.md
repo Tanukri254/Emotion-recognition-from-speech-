@@ -10,7 +10,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import accuracy_score
 #Extract features (mfcc, chroma, mel) from a sound file
-def extract_feature(file_name, mfcc, chroma, mel):
+def extract_feature(file_name, mfcc, chroma, mel): 
     with soundfile.SoundFile(file_name) as sound_file:
         X = sound_file.read(dtype="float32")
         sample_rate=sound_file.samplerate
